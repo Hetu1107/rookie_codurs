@@ -19,7 +19,7 @@ function First() {
             <i class="far fa-registered"></i>
           </div>
           <div>
-            <i class="fas fa-comments"></i>
+            <i class="fas fa-comments" onClick={()=>window.location.assign("/rooms")}></i>
           </div>
         </div>
         <h2>Hello visitor Welcome To the IIIT SUART ALUMNI website</h2>
@@ -54,8 +54,8 @@ function First() {
             <h2>Register / Login Here</h2>
           </div>
           <div className="alumni_search cc">
-            <button>Login</button>
-            <button>Register</button>
+            <button onClick={()=>window.location.assign("/login")}>Login</button>
+            <button onClick={()=>window.location.assign("/register")}>Register</button>
           </div>
         </div>
       </div>

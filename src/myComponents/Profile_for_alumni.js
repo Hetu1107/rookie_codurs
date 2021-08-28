@@ -16,11 +16,12 @@ function Profilealumni() {
   const [worked, setWorked] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  console.log(localStorage.getItem("admission"))
 
   useEffect(() => {
     db.collection("institute").onSnapshot((snapshot) => {
       snapshot.docs.map((doc) => {
-        if (doc.data().admission == "UI20CS74") {
+        if (doc.data().admission ==localStorage.getItem("admission")) {
           setStudent({
             id: doc.id,
             data: doc.data(),

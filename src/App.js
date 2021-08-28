@@ -7,56 +7,47 @@ import Login from "./myComponents/Login";
 import Search from "./myComponents/Search";
 import SideBar from "./myComponents/SideBar";
 import StudentInfo from "./myComponents/StudentInfo";
-import Event from "./myComponents/Event";
+
 import Profile from "./myComponents/Profile_for_viewer";
 import Profilealumni from "./myComponents/Profile_for_alumni";
-import AddEvent from "./myComponents/add_event";
-import AddAlumni from "./myComponents/add_alumni";
+import RegistrationPage from "./myComponents/RegistrationPage";
+import LoginPage from "./myComponents/LoginPage";
 import ConfirmedRegistration from "./myComponents/ConfirmedRegistration";
-
-
 
 function App() {
   const [user, setUser] = useState(true);
   return (
-    <div className="app">
+    <div className="App">
       <Router>
         <Switch>
           <Route exact path="/">
             <First />
           </Route>
           <Route exact path="/profile">
-              <Profile/>
+            <Profile />
           </Route>
           <Route exact path="/profilealumni">
-              <Profilealumni />
-          </Route>
-          <Route exact path="/event">
-              <Event />
-          </Route>
-          <Route exact path="/add_event">
-              <AddEvent />
-          </Route>
-          <Route exact path="/add_alumni">
-              <AddAlumni />
-          </Route>
-          <Route exact path="/confirm_regestration">
-              <ConfirmedRegistration />
+            <Profilealumni />
           </Route>
           <Route exact path="/register">
-            {" "}
+            <RegistrationPage />
+          </Route>
+          <Route exact path="/confirmRegistration">
+            <ConfirmedRegistration />
           </Route>
           <Route exact path="/login">
-            {" "}
+            <LoginPage />
           </Route>
           <Route exact path="/search">
             <Search />
           </Route>
-          <Route path="/student"><StudentInfo/></Route>
+          <Route path="/student">
+            <StudentInfo />
+          </Route>
         </Switch>
       </Router>
-      <div className="app_body">
-       <Router>
+      {/* <div className="app_body"> */}
+      <Router>
         <Switch>
           <Route exact path="/rooms/:roomId">
             <SideBar />
@@ -66,8 +57,8 @@ function App() {
             <SideBar />
           </Route>
         </Switch>
-      </Router> 
-      </div>
+      </Router>
+      {/* </div> */}
     </div>
   );
 }
