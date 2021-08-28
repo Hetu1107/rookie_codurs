@@ -16,12 +16,12 @@ function Profilealumni() {
   const [worked, setWorked] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  console.log(localStorage.getItem("admission"))
+  console.log(localStorage.getItem("admission"));
 
   useEffect(() => {
     db.collection("institute").onSnapshot((snapshot) => {
       snapshot.docs.map((doc) => {
-        if (doc.data().admission ==localStorage.getItem("admission")) {
+        if (doc.data().admission == localStorage.getItem("admission")) {
           setStudent({
             id: doc.id,
             data: doc.data(),
@@ -61,23 +61,6 @@ function Profilealumni() {
   }, [student]);
   console.log(detail);
   console.log(name);
-
-  const save = (e) => {
-    e.preventDefault();
-    db.collection("institute").doc(student.id).update({
-      name: name,
-      admission: admission,
-      batch: batch,
-    });
-    db.collection("institute")
-      .doc(student.id)
-      .collection("details")
-      .doc(detail.id)
-      .update({
-        // company: company,
-        // about: about,
-      });
-  };
 
   return (
     <div className="profile_page">
@@ -139,8 +122,10 @@ function Profilealumni() {
           <h4>{worked}</h4>
         </div>
         <div id="profile_button">
-          <button>Edit</button>
-          <button>Back</button>
+          <button onClick={() => window.location.assign("/add_alumni")}>
+            Edit
+          </button>
+          <button onClick={() => window.location.assign("/")}>Back</button>
         </div>
       </div>
     </div>

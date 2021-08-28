@@ -14,6 +14,7 @@ import LoginPage from "./myComponents/LoginPage";
 import ConfirmedRegistration from "./myComponents/ConfirmedRegistration";
 import Event from "./myComponents/Event";
 import AddEvent from "./myComponents/add_event";
+import AddAlumni from "./myComponents/add_alumni";
 
 
 function App() {
@@ -27,6 +28,9 @@ function App() {
           </Route>
           <Route exact path="/profile">
             <Profile />
+          </Route>
+          <Route exact path="/add_alumni">
+            <AddAlumni/>
           </Route>
           <Route exact path="/profilealumni">
             <Profilealumni />
