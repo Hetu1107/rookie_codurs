@@ -6,7 +6,7 @@ function First() {
   const [value, setValue]=useState('');
   const submit=()=> {
     localStorage.setItem("id",value);
-    window.location.assign('/search')
+    window.location.assign('/searchAlumni')
   }
   return (
     <div class="first_body">
@@ -30,7 +30,7 @@ function First() {
       <div className="second_first">
         <div className="search_alumni">
           <div className="search_alumni_head">
-            <h2>Sreach Alumni</h2>
+            <h2>Seaach Alumni</h2>
           </div>
           <div className="input_search_alumni">
             <div>

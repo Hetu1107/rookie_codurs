@@ -17,6 +17,7 @@ import AddEvent from "./myComponents/add_event";
 import AddAlumni from "./myComponents/add_alumni";
 import MainChat from "./myComponents/mainchat";
 import Event from "./myComponents/Event";
+import SearchAlumni from "./myComponents/SearchAlumni";
 
 
 
@@ -61,6 +62,9 @@ function App() {
           </Route>
           <Route path="/event" exact>
             <Event />
+          </Route>
+          <Route exact path="/searchAlumni">
+            <SearchAlumni/>
           </Route>
           <Route path="/rooms">
             <MainChat/>
