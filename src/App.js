@@ -6,13 +6,15 @@ import First from "./myComponents/first_page";
 import Login from "./myComponents/Login";
 import Search from "./myComponents/Search";
 import SideBar from "./myComponents/SideBar";
-import StudentInfo from "./myComponents/StudentInfo";
 
 import Profile from "./myComponents/Profile_for_viewer";
 import Profilealumni from "./myComponents/Profile_for_alumni";
 import RegistrationPage from "./myComponents/RegistrationPage";
 import LoginPage from "./myComponents/LoginPage";
 import ConfirmedRegistration from "./myComponents/ConfirmedRegistration";
+import Event from "./myComponents/Event";
+import AddEvent from "./myComponents/add_event";
+
 
 function App() {
   const [user, setUser] = useState(true);
@@ -41,8 +43,11 @@ function App() {
           <Route exact path="/search">
             <Search />
           </Route>
-          <Route path="/student">
-            <StudentInfo />
+          <Route exact path="/add_event">
+            <AddEvent/>
+          </Route>
+          <Route path="/event" exact>
+            <Event />
           </Route>
         </Switch>
       </Router>
