@@ -1,11 +1,31 @@
 import React, { useEffect, useState } from "react";
+import db from "../FireBase";
 import "./RegistrationPage.css";
 
 function RegistrationPage() {
   const [admission, setAdmission] = useState("");
+  const [name, setName] = useState("");
+  const [batch, setBatch] = useState("");
   const submit = () => {
-    window.location.assign("/confirmRegistration");
-    localStorage.setItem("admission", admission);
+    db.collection("institute").onSnapshot((snapshot) => {
+      snapshot.docs.map((doc) => {
+        if (doc.data().admission === admission) {
+          localStorage.setItem("name",name)
+          console.log(doc.data().admission);
+          console.log(admission);
+          db.collection("alumni")
+            .add({
+              admission: admission,
+              batch: batch,
+              name: name,
+            })
+            .then(() => {
+              window.location.assign("/confirmRegistration");
+              localStorage.setItem("admission", admission);
+            });
+        }
+      });
+    });
   };
 
   return (
@@ -26,14 +46,22 @@ function RegistrationPage() {
             </div>
             <div>
               <label>Name</label>
-              <input type="text"></input>
+              <input
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                type="text"
+              ></input>
             </div>
             <div>
               <label>Batch</label>
-              <input type="number"></input>
+              <input
+                value={batch}
+                onChange={(e) => setBatch(e.target.value)}
+                type="number"
+              ></input>
             </div>
             <div className="submit_button">
-              <button onClick={submit}>search</button>
+              <button onClick={submit}>Next</button>
             </div>
           </div>
         </div>
