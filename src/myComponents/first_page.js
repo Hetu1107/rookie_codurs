@@ -1,13 +1,13 @@
 import React from "react";
-import {useState,useEffect} from 'react';
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./firstPage.css";
 function First() {
-  const [value, setValue]=useState('');
-  const submit=()=> {
-    localStorage.setItem("id",value);
-    window.location.assign('/searchAlumni')
-  }
+  const [value, setValue] = useState("");
+  const submit = () => {
+    localStorage.setItem("id", value);
+    window.location.assign("/searchAlumni");
+  };
   return (
     <div class="first_body">
       <div className="welcome_first">
@@ -19,10 +19,16 @@ function First() {
             <i class="far fa-registered"></i>
           </div>
           <div>
-            <i class="fas fa-comments" onClick={()=>window.location.assign("/rooms")}></i>
+            <i
+              class="fas fa-comments"
+              onClick={() => window.location.assign("/rooms")}
+            ></i>
           </div>
           <div>
-          <i class="fas fa-calendar-day" onClick={()=>window.location.assign("/event")}></i>
+            <i
+              class="fas fa-calendar-day"
+              onClick={() => window.location.assign("/event")}
+            ></i>
           </div>
         </div>
         <h2>Hello visitor Welcome To the IIIT SUART ALUMNI website</h2>
@@ -35,20 +41,21 @@ function First() {
           <div className="input_search_alumni">
             <div>
               <label>Batch</label>
-              <input type="number" className="search_alm_inp"></input>
+              <input
+                type="number"
+                onChange={(event) => setValue(event.target.value)}
+                value={value}
+                className="search_alm_inp"
+              ></input>
             </div>
             <div>
               <label>Name</label>
-
             </div>
             <div>
-            <input type="text"
-           className="search_alm_inp" onChange={(event) => setValue(event.target.value)} value={value}></input>
+              <input type="text" className="search_alm_inp"></input>
             </div>
             <div className="alumni_search">
-              <button onClick={submit}>
-                search
-              </button>
+              <button onClick={submit}>search</button>
             </div>
           </div>
         </div>
@@ -57,8 +64,12 @@ function First() {
             <h2>Register / Login Here</h2>
           </div>
           <div className="alumni_search cc">
-            <button onClick={()=>window.location.assign("/login")}>Login</button>
-            <button onClick={()=>window.location.assign("/register")}>Register</button>
+            <button onClick={() => window.location.assign("/login")}>
+              Login
+            </button>
+            <button onClick={() => window.location.assign("/register")}>
+              Register
+            </button>
           </div>
         </div>
       </div>

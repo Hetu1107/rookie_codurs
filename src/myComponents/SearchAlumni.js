@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import db from "../FireBase";
 
 function SearchAlumni() {
+  const [final, setFinal] = useState([]);
   const [search, setSearch] = useState([]);
   useEffect(() => {
     db.collection("institute").onSnapshot((snapshhot) => {
@@ -15,7 +16,12 @@ function SearchAlumni() {
   }, []);
   console.log(search);
 
-  return search.map((s) => {
+  useEffect(() => {
+    setFinal(search.filter((item) => item.data?.batch === 2024));
+  }, [search]);
+  console.log(final);
+
+  return final.map((s) => {
     return (
       <>
         <a
