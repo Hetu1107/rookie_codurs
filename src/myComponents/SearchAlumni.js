@@ -27,12 +27,12 @@ function SearchAlumni() {
 
   // return final.map((s) => {
   return (
-    <>
-      <div className="searchalumni">
-        <div className="searchalumni_head">
-          <h2>Search Results :</h2>
-        </div>
-        <div className="searchalumni_main">
+    <div>
+      <div>
+        <div class="Background">
+          <div className="Title">
+            <h2>Search Results</h2>
+          </div>
           {final.map((s) => {
             return (
               <>
@@ -41,21 +41,32 @@ function SearchAlumni() {
                   onClick={() =>
                     localStorage.setItem("admission", s.data?.admission)
                   }
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <div>{s.data?.admission}</div>
-                  <div>{s.data?.batch}</div>
-                  <div>{s.data?.name}</div>
+                  <div className="ProfileBackground">
+                    <div className="Profile">
+                      <div>
+                        <h3>Name:{s.data?.name}</h3>
+                      </div>
+                      <div>
+                        <h3>Batch:{s.data?.batch}</h3>
+                      </div>
+                      <div>
+                        <h3>Addmission No:{s.data?.admission}</h3>
+                      </div>
+                    </div>
+                  </div>
                 </a>
-                <br />
               </>
             );
           })}
-          ;
         </div>
       </div>
-    </>
+    </div>
   );
   // });
 }
 
 export default SearchAlumni;
+

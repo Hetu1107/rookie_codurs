@@ -13,10 +13,16 @@ function First() {
       <div className="welcome_first">
         <div className="welcome_first_nav">
           <div>
-            <i class="fas fa-search" onClick={()=> window.location.assign("#search_alumni")}></i>
+            <i
+              class="fas fa-search"
+              onClick={() => window.location.assign("#search_alumni")}
+            ></i>
           </div>
           <div>
-            <i class="far fa-registered" onClick={()=> window.location.assign("#register_alumni")}></i>
+            <i
+              class="far fa-registered"
+              onClick={() => window.location.assign("#register_alumni")}
+            ></i>
           </div>
           <div>
             <i
@@ -45,7 +51,9 @@ function First() {
                 type="number"
                 onChange={(event) => setValue(event.target.value)}
                 value={value}
-                className="search_alm_inp" placeholder="Ex : 2024"></input>
+                className="search_alm_inp"
+                placeholder="Ex : 2020"
+              ></input>
             </div>
             <div className="alumni_search">
               <button onClick={submit}>search</button>
