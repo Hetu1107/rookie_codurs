@@ -31,7 +31,7 @@ function First() {
             ></i>
           </div>
         </div>
-        <h2>Hello visitor Welcome To the IIIT SUART ALUMNI website</h2>
+        <h2>Welcome To THE IIIT SUART ALUMNI WEBSITE</h2>
       </div>
       <div className="second_first">
         <div className="search_alumni" id="search_alumni">
