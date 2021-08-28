@@ -21,6 +21,9 @@ function First() {
           <div>
             <i class="fas fa-comments" onClick={()=>window.location.assign("/rooms")}></i>
           </div>
+          <div>
+          <i class="fas fa-calendar-day" onClick={()=>window.location.assign("/event")}></i>
+          </div>
         </div>
         <h2>Hello visitor Welcome To the IIIT SUART ALUMNI website</h2>
       </div>

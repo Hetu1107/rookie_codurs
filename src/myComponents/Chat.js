@@ -67,7 +67,7 @@ function Chat() {
           </p>
         </div>
         <div className="chatheader_right">
-          <IconButton>
+          {/* <IconButton>
             <SearchOutlined />
           </IconButton>
           <IconButton>
@@ -75,7 +75,10 @@ function Chat() {
           </IconButton>
           <IconButton>
             <MoreVert />
-          </IconButton>
+          </IconButton> */}
+          <i class="fas fa-search"></i>
+          <i class="far fa-file"></i>
+          <i class="fas fa-info"></i>
         </div>
       </div>
       <div className="chat_body">
@@ -94,9 +97,7 @@ function Chat() {
         ))}
       </div>
       <div className="chat_footer">
-        <IconButton>
-          <EmojiEmotionsOutlined />
-        </IconButton>
+      <i class="far fa-smile"></i>
         <form action="">
           <input
             type="text"
@@ -111,9 +112,7 @@ function Chat() {
             Send a message
           </button>
         </form>
-        <IconButton>
-          <Mic />
-        </IconButton>
+        <i class="fas fa-blender-phone"></i>
       </div>
     </div>
   );
