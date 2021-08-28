@@ -4,70 +4,73 @@ import db from "../FireBase";
 import "./profile.css";
 
 function Profile() {
-    const [student, setStudent] = useState([]);
-    const [detail, setDetail] = useState([]);
-    const [name, setName] = useState("");
-    const [admission, setAdmission] = useState("");
-    const [batch, setBatch] = useState("");
-    const [projects, setProjects] = useState("");
-    const [research, setResearch] = useState("");
-    const [experience, setExperience] = useState("");
-    const [branch, setBranch] = useState("");
-    const [position, setPosition] = useState("");
-    const [worked, setWorked] = useState("");
-    const [email, setEmail] = useState("");
-    const [phone, setPhone] = useState("");
-    console.log(localStorage.getItem("admission"));
-  
-    useEffect(() => {
-      db.collection("institute").onSnapshot((snapshot) => {
-        snapshot.docs.map((doc) => {
-          if (doc.data().admission == localStorage.getItem("admission")) {
-            setStudent({
+  const [student, setStudent] = useState([]);
+  const [detail, setDetail] = useState([]);
+  const [name, setName] = useState("");
+  const [admission, setAdmission] = useState("");
+  const [batch, setBatch] = useState("");
+  const [projects, setProjects] = useState("");
+  const [research, setResearch] = useState("");
+  const [experience, setExperience] = useState("");
+  const [branch, setBranch] = useState("");
+  const [position, setPosition] = useState("");
+  const [worked, setWorked] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [url, setUrl] = useState("");
+
+  console.log(localStorage.getItem("admission"));
+
+  useEffect(() => {
+    db.collection("institute").onSnapshot((snapshot) => {
+      snapshot.docs.map((doc) => {
+        if (doc.data().admission == localStorage.getItem("admission")) {
+          setStudent({
+            id: doc.id,
+            data: doc.data(),
+          });
+          setName(doc.data()?.name);
+          setAdmission(doc.data()?.admission);
+          setBatch(doc.data()?.batch);
+          setEmail(doc.data()?.email);
+          setPhone(doc.data()?.phone);
+          setUrl(doc.data()?.url);
+        }
+      });
+    });
+  }, []);
+  console.log(student);
+
+  useEffect(() => {
+    if (student) {
+      db.collection("institute")
+        .doc(student.id)
+        .collection("details")
+        .onSnapshot((snapshot) => {
+          snapshot.docs.map((doc) => {
+            setDetail({
               id: doc.id,
               data: doc.data(),
             });
-            setName(doc.data()?.name);
-            setAdmission(doc.data()?.admission);
-            setBatch(doc.data()?.batch);
-            setEmail(doc.data()?.email);
-            setPhone(doc.data()?.phone);
-          }
-        });
-      });
-    }, []);
-    console.log(student);
-  
-    useEffect(() => {
-      if (student) {
-        db.collection("institute")
-          .doc(student.id)
-          .collection("details")
-          .onSnapshot((snapshot) => {
-            snapshot.docs.map((doc) => {
-              setDetail({
-                id: doc.id,
-                data: doc.data(),
-              });
-              setProjects(doc.data()?.projects);
-              setBranch(doc.data()?.branch);
-              setPosition(doc.data()?.currentPosition);
-              setResearch(doc.data()?.research);
-              setExperience(doc.data()?.experience);
-              setProjects(doc.data()?.projects);
-              setWorked(doc.data()?.worked);
-            });
+            setProjects(doc.data()?.projects);
+            setBranch(doc.data()?.branch);
+            setPosition(doc.data()?.currentPosition);
+            setResearch(doc.data()?.research);
+            setExperience(doc.data()?.experience);
+            setProjects(doc.data()?.projects);
+            setWorked(doc.data()?.worked);
           });
-      }
-    }, [student]);
-    console.log(detail);
-    console.log(name);
+        });
+    }
+  }, [student]);
+  console.log(detail);
+  console.log(name);
 
   return (
     <div className="profile_page">
       <div className="profile_page_left">
         <div className="profile_img">
-          <img src="https://images.pexels.com/photos/1040881/pexels-photo-1040881.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
+          <img src={url}/>
           <div className="profile_img_absolute">
             <h3>{name}</h3>
           </div>
@@ -123,7 +126,7 @@ function Profile() {
           <h4>{worked}</h4>
         </div>
         <div className="profile_button">
-          <button onClick={()=>window.location.assign("/")}>Back</button>
+          <button onClick={() => window.location.assign("/")}>Back</button>
         </div>
       </div>
     </div>
