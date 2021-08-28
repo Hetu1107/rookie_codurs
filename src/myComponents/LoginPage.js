@@ -37,8 +37,7 @@ function LoginPage() {
             <input
               value={admission}
               onChange={(e) => setAdmission(e.target.value)}
-              type="text"
-            ></input>
+              type="text" placeholder="Ex : UI20CS48"></input>
           </div>
           <div>
             <label>Password</label>

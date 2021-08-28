@@ -41,24 +41,21 @@ function RegistrationPage() {
               <input
                 value={admission}
                 onChange={(e) => setAdmission(e.target.value)}
-                type="text"
-              ></input>
+                type="text" placeholder="Ex: UI20CS48"></input>
             </div>
             <div>
               <label>Name</label>
               <input
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                type="text"
-              ></input>
+                type="text" placeholder="Ex: XYZ"></input>
             </div>
             <div>
               <label>Batch</label>
               <input
                 value={batch}
                 onChange={(e) => setBatch(e.target.value)}
-                type="number"
-              ></input>
+                type="number" placeholder="Ex : 2024"></input>
             </div>
             <div className="submit_button">
               <button onClick={submit}>Next</button>

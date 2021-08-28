@@ -45,8 +45,7 @@ function First() {
                 type="number"
                 onChange={(event) => setValue(event.target.value)}
                 value={value}
-                className="search_alm_inp"
-              ></input>
+                className="search_alm_inp" placeholder="Ex : 2024"></input>
             </div>
             <div className="alumni_search">
               <button onClick={submit}>search</button>
