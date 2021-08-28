@@ -12,18 +12,13 @@ import Profilealumni from "./myComponents/Profile_for_alumni";
 import RegistrationPage from "./myComponents/RegistrationPage";
 import LoginPage from "./myComponents/LoginPage";
 import ConfirmedRegistration from "./myComponents/ConfirmedRegistration";
-<<<<<<< HEAD
+
 import AddEvent from "./myComponents/add_event";
 import MainChat from "./myComponents/mainchat";
 import Event from "./myComponents/Event";
-||||||| 7c0bbaa
-
-=======
-import Event from "./myComponents/Event";
-import AddEvent from "./myComponents/add_event";
 
 
->>>>>>> 94ca1435508f39349ca311cf58f5da448d02caef
+
 function App() {
   const [user, setUser] = useState(true);
   return (

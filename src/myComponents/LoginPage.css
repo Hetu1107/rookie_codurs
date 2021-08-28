@@ -47,6 +47,7 @@
   display: flex;
   flex-direction: column;
   padding: 10px 0;
+  align-items: center;
   justify-content: center;
 }
 .login_details div label {
@@ -72,7 +73,7 @@
   border: 3px solid #ffffff73;
 }
 .login_details div input:focus {
-  border: 3px solid #d6ed17ff;
+  border: 3px solid #542bb3;
 }
 .login_button button {
   width: 150px;
@@ -82,9 +83,9 @@
   border-radius: 4px;
   outline: none;
   border: none;
-  background: #d6ed17ff;
+  background: #5118d4;
   font-size: 18px;
-  color: rgb(66, 66, 66);
+  color: #d9b9ff;
   font-weight: 400;
   transition: all 400ms ease;
   text-transform: uppercase;
@@ -92,4 +93,9 @@
 .login_button button:hover {
   background: rgba(43, 0, 213, 0.24);
   color: rgb(255, 255, 255);
+}
+@media only screen and (max-width: 800px){
+  .login_details div input{
+    width: 50vw;
+  }
 }

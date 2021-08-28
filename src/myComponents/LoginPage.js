@@ -49,7 +49,7 @@ function LoginPage() {
             ></input>
           </div>
           <div className="login_button">
-            <button onClick={submit}>search</button>
+            <button onClick={submit}>Submit</button>
           </div>
         </div>
       </div>
