@@ -31,4 +31,4 @@ function ConfirmedRegistration() {
     )
 }
 
-export default ConfirmedRegistration
+export default ConfirmedRegistration;
