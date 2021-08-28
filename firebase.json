@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "site": "whatsapp-clone-by-zaid",
     "public": "build",
     "ignore": [
       "firebase.json",
@@ -15,4 +14,3 @@
     ]
   }
 }
-
