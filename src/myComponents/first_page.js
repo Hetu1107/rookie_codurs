@@ -36,7 +36,7 @@ function First() {
       <div className="second_first">
         <div className="search_alumni">
           <div className="search_alumni_head">
-            <h2>Seaach Alumni</h2>
+            <h2>Search Alumni</h2>
           </div>
           <div className="input_search_alumni">
             <div>
@@ -47,12 +47,6 @@ function First() {
                 value={value}
                 className="search_alm_inp"
               ></input>
-            </div>
-            <div>
-              <label>Name</label>
-            </div>
-            <div>
-              <input type="text" className="search_alm_inp"></input>
             </div>
             <div className="alumni_search">
               <button onClick={submit}>search</button>
