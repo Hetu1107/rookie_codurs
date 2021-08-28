@@ -5,6 +5,7 @@ font-family: 'Nunito', sans-serif;
 font-family: 'Roboto', sans-serif; */
 
 .first_body {
+  scroll-behavior: smooth;
   display: flex;
   flex-direction: column;
   width: 100vw;
