@@ -7,9 +7,14 @@ import Login from "./myComponents/Login";
 import Search from "./myComponents/Search";
 import SideBar from "./myComponents/SideBar";
 import StudentInfo from "./myComponents/StudentInfo";
-
+import Event from "./myComponents/Event";
 import Profile from "./myComponents/Profile_for_viewer";
 import Profilealumni from "./myComponents/Profile_for_alumni";
+import AddEvent from "./myComponents/add_event";
+import AddAlumni from "./myComponents/add_alumni";
+import ConfirmedRegistration from "./myComponents/ConfirmedRegistration";
+
+
 
 function App() {
   const [user, setUser] = useState(true);
@@ -25,6 +30,18 @@ function App() {
           </Route>
           <Route exact path="/profilealumni">
               <Profilealumni />
+          </Route>
+          <Route exact path="/event">
+              <Event />
+          </Route>
+          <Route exact path="/add_event">
+              <AddEvent />
+          </Route>
+          <Route exact path="/add_alumni">
+              <AddAlumni />
+          </Route>
+          <Route exact path="/confirm_regestration">
+              <ConfirmedRegistration />
           </Route>
           <Route exact path="/register">
             {" "}
