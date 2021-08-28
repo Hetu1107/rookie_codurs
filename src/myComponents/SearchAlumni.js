@@ -17,15 +17,18 @@ function SearchAlumni() {
   console.log(search);
 
   useEffect(() => {
-    setFinal(search.filter((item) => item.data?.batch === 2024));
+    setFinal(
+      search.filter((item) => item.data?.batch === localStorage.getItem("id"))
+    );
   }, [search]);
   console.log(final);
+  console.log(localStorage.getItem("id"));
 
   return final.map((s) => {
     return (
       <>
         <a
-          href="/profilealumni"
+          href="/vieweralumni"
           onClick={() => localStorage.setItem("admission", s.data?.admission)}
         >
           <div>{s.data?.admission}</div>

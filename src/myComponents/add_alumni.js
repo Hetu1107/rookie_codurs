@@ -57,7 +57,15 @@ function AddAlumni() {
         worked: worked,
       })
       .then(() => {
-        window.location.assign("/profilealumni");
+        db.collection("institute")
+          .doc(student.id)
+          .update({
+            phone: phone,
+            email: email,
+          })
+          .then(() => {
+            window.location.assign("/profilealumni");
+          });
       });
   };
   return (

@@ -19,8 +19,6 @@ import MainChat from "./myComponents/mainchat";
 import Event from "./myComponents/Event";
 import SearchAlumni from "./myComponents/SearchAlumni";
 
-
-
 function App() {
   const [user, setUser] = useState(true);
   return (
@@ -31,19 +29,22 @@ function App() {
             <First />
           </Route>
           <Route exact path="/add_event">
-            <AddEvent/>
+            <AddEvent />
           </Route>
           <Route exact path="/profile">
             <Profile />
           </Route>
           <Route exact path="/add_alumni">
-            <AddAlumni/>
-            </Route>
+            <AddAlumni />
+          </Route>
           <Route exact path="/event">
-            <Event/>
+            <Event />
           </Route>
           <Route exact path="/profilealumni">
             <Profilealumni />
+          </Route>
+          <Route exact path="/vieweralumni">
+            <Profile />
           </Route>
           <Route exact path="/register">
             <RegistrationPage />
@@ -58,21 +59,20 @@ function App() {
             <Search />
           </Route>
           <Route exact path="/add_event">
-            <AddEvent/>
+            <AddEvent />
           </Route>
           <Route path="/event" exact>
             <Event />
           </Route>
           <Route exact path="/searchAlumni">
-            <SearchAlumni/>
+            <SearchAlumni />
           </Route>
           <Route path="/rooms">
-            <MainChat/>
+            <MainChat />
           </Route>
-          
         </Switch>
       </Router>
-      
+
       {/* <div className="app_body"> */}
       {/* <Router>
         <Switch>
@@ -87,9 +87,7 @@ function App() {
       </Router> */}
       {/* </div> */}
     </div>
-    
   );
-  
 }
 
 export default App;
