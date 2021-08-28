@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+# HACKOUT'21
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### To run application type `npm start` in terminal.
 
-## Available Scripts
+### Technologies Used  `React.js, Firebase, Html, Css, JS.`
 
-In the project directory, you can run:
+### App Will Run on Local Host 3000.
 
-### `npm start`
+<br/>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Topic : Web-App on Track Of Alumni
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<h3>You Can Also Visit Below Link We have deployed Our Project On that Site. </h3>
+https://hackout-3b7b5.firebaseapp.com/
 
-### `npm test`
+# Brief Intro About App.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### We have created a web application for helping college to stay connected with alumni. 
+In our web app college has old data of alumnies.
+Alumni can visit the website and then he/she can first register him/her self where we have authenticate with the college data which we have stored into fire base.after registration he/she have to create a password for her/his profile so that in future he/she  can directly go to their profile.
+<br/>
+After login a alumni profile page will appear where every thing about him/her self will be give for exp: Passing Year , Work experience,  current position, profile photo, and all . He/she can change any detail given there. This will be only for alumni other can't change the details. In the main page a search section is there where anyone can search for alumni by just typing passing year of alumni. They can watch alumni full profile. 
+<br/>
+Also there is a chat app what u can create a personal group and any one can join into that by that connections can increase and also there would be a event section where u can add any ceremony event details or and imp event so that every one can join that event .
