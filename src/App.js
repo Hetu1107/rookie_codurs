@@ -12,9 +12,12 @@ import Profilealumni from "./myComponents/Profile_for_alumni";
 import RegistrationPage from "./myComponents/RegistrationPage";
 import LoginPage from "./myComponents/LoginPage";
 import ConfirmedRegistration from "./myComponents/ConfirmedRegistration";
-import Event from "./myComponents/Event";
+
 import AddEvent from "./myComponents/add_event";
 import AddAlumni from "./myComponents/add_alumni";
+import MainChat from "./myComponents/mainchat";
+import Event from "./myComponents/Event";
+
 
 
 function App() {
@@ -26,11 +29,17 @@ function App() {
           <Route exact path="/">
             <First />
           </Route>
+          <Route exact path="/add_event">
+            <AddEvent/>
+          </Route>
           <Route exact path="/profile">
             <Profile />
           </Route>
           <Route exact path="/add_alumni">
             <AddAlumni/>
+            </Route>
+          <Route exact path="/event">
+            <Event/>
           </Route>
           <Route exact path="/profilealumni">
             <Profilealumni />
@@ -53,10 +62,15 @@ function App() {
           <Route path="/event" exact>
             <Event />
           </Route>
+          <Route path="/rooms">
+            <MainChat/>
+          </Route>
+          
         </Switch>
       </Router>
+      
       {/* <div className="app_body"> */}
-      <Router>
+      {/* <Router>
         <Switch>
           <Route exact path="/rooms/:roomId">
             <SideBar />
@@ -66,10 +80,12 @@ function App() {
             <SideBar />
           </Route>
         </Switch>
-      </Router>
+      </Router> */}
       {/* </div> */}
     </div>
+    
   );
+  
 }
 
 export default App;

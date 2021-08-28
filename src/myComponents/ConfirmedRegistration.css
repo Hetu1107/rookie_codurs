@@ -53,6 +53,7 @@
     flex-direction: column;
     padding: 10px 0;
     justify-content: center;
+    align-items: center;
   }
   .id_password div label {
     font-size: 24px;
@@ -77,24 +78,30 @@
     border: 3px solid #ffffff73;
   }
   .id_password div input:focus {
-    border: 3px solid #d6ed17ff;
+    border: 3px solid #542bb3;
   }
   .submit_button button {
     width: 150px;
-    height: 40px;
-    margin-top: 40px;
-    cursor: pointer;
-    border-radius: 4px;
-    outline: none;
-    border: none;
-    background: #d6ed17ff;
-    font-size: 18px;
-    color: rgb(66, 66, 66);
-    font-weight: 400;
-    transition: all 400ms ease;
-    text-transform: uppercase;
+  height: 40px;
+  margin-top: 40px;
+  cursor: pointer;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  background: #5118d4;
+  font-size: 18px;
+  color: #d9b9ff;
+  font-weight: 400;
+  transition: all 400ms ease;
+  text-transform: uppercase;
   }
   .submit_button button:hover {
     background: rgba(43, 0, 213, 0.24);
     color: rgb(255, 255, 255);
+  }
+
+  @media only screen and (max-width: 800px){
+    .id_password div input{
+      width: 50vw;
+    }
   }
