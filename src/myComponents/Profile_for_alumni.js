@@ -84,11 +84,11 @@ function Profilealumni() {
             </div>
             <div>
               <h2>Phone No.</h2>
-              <h3>{phone}</h3>
+              <h3 onClick={() => {navigator.clipboard.writeText(`${phone}`)} }>{phone}</h3>
             </div>
             <div>
-              <h2>Email</h2>
-              <a href="#">{email}</a>
+              <h2><i class="far fa-envelope"></i> Email</h2>
+              <a href="">{email}</a>
             </div>
           </div>
         </div>

@@ -13,10 +13,10 @@ function First() {
       <div className="welcome_first">
         <div className="welcome_first_nav">
           <div>
-            <i class="fas fa-search"></i>
+            <i class="fas fa-search" onClick={()=> window.location.assign("#search_alumni")}></i>
           </div>
           <div>
-            <i class="far fa-registered"></i>
+            <i class="far fa-registered" onClick={()=> window.location.assign("#register_alumni")}></i>
           </div>
           <div>
             <i
@@ -34,7 +34,7 @@ function First() {
         <h2>Hello visitor Welcome To the IIIT SUART ALUMNI website</h2>
       </div>
       <div className="second_first">
-        <div className="search_alumni">
+        <div className="search_alumni" id="search_alumni">
           <div className="search_alumni_head">
             <h2>Search Alumni</h2>
           </div>
@@ -53,7 +53,7 @@ function First() {
             </div>
           </div>
         </div>
-        <div className="alumni_section">
+        <div className="alumni_section" id="register_alumni">
           <div>
             <h2>Register / Login Here</h2>
           </div>
