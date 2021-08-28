@@ -34,7 +34,7 @@ function Event() {
               <div class="box">
                 <div class="img">
                   <img
-                    src="https://img.freepik.com/free-vector/music-event-poster-template-with-abstract-shapes_1361-1316.jpg?size=626&ext=jpg"
+                    src="https://1yfd8w35xqq41q3ou63czp8h-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/etouches-post-alimni-events.jpg"
                     class="ii"
                   />
                 </div>
