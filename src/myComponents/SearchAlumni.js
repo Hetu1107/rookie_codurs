@@ -69,4 +69,3 @@ function SearchAlumni() {
 }
 
 export default SearchAlumni;
-
