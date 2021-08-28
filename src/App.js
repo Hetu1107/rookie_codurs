@@ -14,7 +14,7 @@ import Profilealumni from "./myComponents/Profile_for_alumni";
 function App() {
   const [user, setUser] = useState(true);
   return (
-    <div className="App">
+    <div className="app">
       <Router>
         <Switch>
           <Route exact path="/">
@@ -38,22 +38,19 @@ function App() {
           <Route path="/student"><StudentInfo/></Route>
         </Switch>
       </Router>
-      {/* <div className="app_body"> */}
-      {/* <Router>
+      <div className="app_body">
+       <Router>
         <Switch>
-          <Route path="/rooms/:roomId">
+          <Route exact path="/rooms/:roomId">
             <SideBar />
             <Chat />
           </Route>
-          <Route path="/rooms">
+          <Route exact path="/rooms">
             <SideBar />
           </Route>
-          <Route path="/">
-            <First />
-          </Route>
         </Switch>
-      </Router> */}
-      {/* </div> */}
+      </Router> 
+      </div>
     </div>
   );
 }
