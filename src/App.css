@@ -4,7 +4,7 @@
   place-items: center;
   height: 100vh;
 }
-
+/* 
 .app_body {
   display: flex;
   height: 90vh;
@@ -12,7 +12,7 @@
   background-color: #ededed;
   margin-top: -50px;
   box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 0.7);
-}
+} */
 
 .App {
   display: flex;

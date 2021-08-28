@@ -32,7 +32,7 @@ function SideBar() {
           <Avatar />
         </IconButton>
         <div className="sidebar_headerRight">
-          <IconButton>
+          {/* <IconButton>
             <DonutLarge />
           </IconButton>
           <IconButton>
@@ -40,19 +40,17 @@ function SideBar() {
           </IconButton>
           <IconButton>
             <MoreVert />
-          </IconButton>
+          </IconButton> */}
         </div>
       </div>
       <div className="sidebar_search">
         <div className="sidebar_searchContainer">
-          <IconButton>
-            <SearchOutlined />
-          </IconButton>
+        <i class="fas fa-search"></i>
           <input
             type="text"
             name=""
             placeholder="Search or start a new chat"
-            id=""
+            id="ses"
           />
         </div>
       </div>
