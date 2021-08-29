@@ -1,5 +1,7 @@
 # HACKOUT'21
 
+<h1>This website was created during hackout'21 counducted by DAIICT(synapse). The team name was rookie_codurs.</h1>
+
 ### To run application type `npm start` in terminal.
 
 ### Technologies Used  `React.js, Firebase, Html, Css, JS.`
